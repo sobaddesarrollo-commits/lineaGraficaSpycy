@@ -1,0 +1,38 @@
+/* ============================================================
+   SpicyAds — EFFECTS: radii, shadows, glows, motion
+   Confident & a touch sharp. Shadows carry warm chili tint.
+   ============================================================ */
+:root {
+  /* Corner radii — moderately tight for a direct, edgy feel */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 28px;
+  --radius-pill: 999px;
+
+  /* Shadows — warm-tinted, never neutral gray */
+  --shadow-xs: 0 1px 2px rgba(83, 18, 40, 0.08);
+  --shadow-sm: 0 2px 6px rgba(83, 18, 40, 0.10);
+  --shadow-md: 0 8px 24px rgba(83, 18, 40, 0.12);
+  --shadow-lg: 0 20px 50px rgba(83, 18, 40, 0.18);
+  --shadow-card: 0 1px 0 rgba(255,255,255,0.6) inset, 0 10px 30px rgba(83,18,40,0.10);
+
+  /* Spice glow — for emphasis / hover on primary actions */
+  --glow-spice: 0 8px 30px rgba(229, 49, 48, 0.40);
+  --glow-spice-soft: 0 6px 22px rgba(240, 116, 34, 0.30);
+
+  /* Focus ring */
+  --focus-ring: 0 0 0 3px var(--ring);
+
+  /* Motion — quick, confident, minimal bounce */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1); /* @kind other */
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1); /* @kind other */
+  --ease-pop: cubic-bezier(0.34, 1.56, 0.64, 1); /* @kind other */
+  --dur-fast: 120ms; /* @kind other */
+  --dur-base: 200ms; /* @kind other */
+  --dur-slow: 360ms; /* @kind other */
+
+  /* Grain / texture overlay (optional, subtle) */
+  --noise-opacity: 0.04; /* @kind other */
+}

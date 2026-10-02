@@ -1,0 +1,94 @@
+/* ============================================================
+   SpicyAds — COLOR TOKENS
+   The brand runs hot: a chili gradient from orange through red
+   into deep berry/magenta, against warm near-black & warm paper.
+   ============================================================ */
+:root {
+  /* ---- Spice ramp (the core brand ramp, mango → ember → berry) ---- */
+  --spice-50:  #fff2e9;
+  --spice-100: #ffdcc4;
+  --spice-200: #ffb98c;
+  --spice-300: #fb8d4a;   /* mango */
+  --spice-400: #f07422;   /* orange — logo stop 1 */
+  --spice-500: #e53130;   /* ember red — primary, logo stop 2 */
+  --spice-600: #c81f3a;
+  --spice-700: #a5244a;   /* berry — logo stop 3 */
+  --spice-800: #7c1f3e;
+  --spice-900: #531228;
+
+  /* ---- Warm neutrals (charcoal carries a faint chili warmth) ---- */
+  --warm-0:   #ffffff;
+  --warm-50:  #faf7f4;   /* paper */
+  --warm-100: #f1ebe5;
+  --warm-200: #e2d8cf;
+  --warm-300: #c8bab0;
+  --warm-400: #a1938a;
+  --warm-500: #756861;
+  --warm-600: #4f4641;
+  --warm-700: #342d29;
+  --warm-800: #211c19;   /* panel on dark */
+  --warm-900: #171210;   /* hero near-black */
+  --warm-950: #0e0a09;   /* deepest */
+
+  /* ---- Semantic status ---- */
+  --green-500:  #1f9d57;
+  --green-100:  #d6f2e1;
+  --amber-500:  #e8a317;
+  --amber-100:  #fcefcf;
+  --blue-500:   #2f6df0;   /* cool counterpoint — links/info only */
+  --blue-100:   #d9e4fd;
+  --red-alert:  #d11f1f;   /* destructive, kept distinct from brand ember */
+
+  /* ============================================================
+     SEMANTIC ALIASES — reference these in components
+     ============================================================ */
+  /* Brand */
+  --brand: var(--spice-500);
+  --brand-strong: var(--spice-700);
+  --brand-bright: var(--spice-400);
+  --brand-ink: var(--warm-0);                 /* text on brand fills */
+  --gradient-spice: linear-gradient(105deg, var(--spice-400) 0%, var(--spice-500) 48%, var(--spice-700) 100%);
+  --gradient-spice-soft: linear-gradient(135deg, #fff2e9 0%, #ffe2d0 100%); /* @kind color */
+  --gradient-ember: radial-gradient(120% 140% at 0% 0%, var(--spice-400) 0%, var(--spice-600) 55%, var(--spice-800) 100%);
+
+  /* Surfaces — light context (default) */
+  --bg-page: var(--warm-50);
+  --surface-card: var(--warm-0);
+  --surface-sunken: var(--warm-100);
+  --surface-raised: var(--warm-0);
+
+  /* Surfaces — dark context (.on-dark scope) */
+  --bg-hero: var(--warm-900);
+  --surface-panel: var(--warm-800);
+
+  /* Text */
+  --text-strong: var(--warm-900);
+  --text-body: var(--warm-700);
+  --text-muted: var(--warm-500);
+  --text-faint: var(--warm-400);
+  --text-on-dark: var(--warm-50);
+  --text-on-dark-muted: var(--warm-300);
+  --text-brand: var(--spice-600);
+  --text-link: var(--blue-500);
+
+  /* Borders & lines */
+  --border: var(--warm-200);
+  --border-strong: var(--warm-300);
+  --border-on-dark: rgba(255,255,255,0.12);
+  --ring: color-mix(in oklab, var(--spice-500) 55%, transparent);
+}
+
+/* Dark scope: drop this class on a section to flip surfaces/text */
+.on-dark {
+  --bg-page: var(--warm-900);
+  --surface-card: var(--warm-800);
+  --surface-sunken: var(--warm-950);
+  --surface-raised: var(--warm-800);
+  --text-strong: var(--warm-50);
+  --text-body: var(--warm-200);
+  --text-muted: var(--warm-400);
+  --text-faint: var(--warm-500);
+  --border: rgba(255,255,255,0.12);
+  --border-strong: rgba(255,255,255,0.22);
+  color: var(--text-body);
+}

@@ -1,0 +1,49 @@
+/* ============================================================
+   SpicyAds — light base resets & primitives.
+   Kept minimal so consumers' own resets win where needed.
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--text-body);
+  background: var(--bg-page);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection { background: var(--spice-300); color: var(--warm-900); }
+
+a { color: var(--text-link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Default heading rhythm (opt-in via .prose or used by kits) */
+h1, h2, h3, h4 {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-extra);
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-tight);
+  color: var(--text-strong);
+  margin: 0;
+}
+
+/* Loud display helper */
+.display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: var(--leading-none);
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-strong);
+}
+
+/* Gradient text helper */
+.text-spice {
+  background: var(--gradient-spice);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
